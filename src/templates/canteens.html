@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/slideshow.css">
+    <link rel="stylesheet" href="../static/nav.css" />
+    <link rel="stylesheet" href="../static/canteens.css">
+    <title>IIIT Eats | Canteens</title>
+  </head>
+  <body>
+    <nav style="font-family: Arial, Helvetica, sans-serif">
+      <a id="clicktohome" href="homepage.html"
+        ><img
+          src="../static/logo.png"
+          alt="Site logo"
+          style="height: 100px; margin-left: 50px"
+      /></a>
+      <ul
+        style="
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          text-align: center;
+          margin-top: 20px;
+          font-family: Courier Prime, Arial;
+        "
+      >
+        <li><a href="canteens.html">Canteens</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html"><img src="../static/cart.png" style="width: 13%;"> Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="https://www.cafetariatcentrum.nl/wp-content/uploads/2020/10/ALB101020-37_-scaled.jpg" style="width:100%">
+          <div class="text">CANTEENS</div>
+        </div>
+        
+        <div class="mySlides fade"><a href="jc.html">
+          <img src="../static/jc.jpeg" style="width:100%">
+          <div class="text">JC</div></a>
+        </div>
+        
+        <div class="mySlides fade"><a href="vc.html">
+          <img src="../static/vc.jpeg" style="width:100%">
+          <div class="text">VC</div></a>
+        </div>
+
+        <div class="mySlides fade"><a href="bbc.html">
+          <img src="../static/bbc.jpeg" style="width:100%">
+          <div class="text">BBC</div></a>
+        </div>
+
+        <div class="mySlides fade"><a href="tantra.html">
+          <img src="../static/tantra.jpeg" style="width:100%">
+          <div class="text">TANTRA</div></a>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        
+        
+        
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        
+        }
+        
+        // Change slides automatically every 3 seconds
+        setInterval(function() {
+          plusSlides(1);
+        }, 3000);
+        
+        
+
+        </script>
+
+        <div class="text_for_cat_and_canteens" style="height: 430px; color: #191919; background-color:#f4d50480; font-size: 55px;"  >
+          
+          <div style="text-align:left; margin-left:20px; padding-top: 20px;">Some days you’re rushing to class..
+            <br>Other days you lazily walk back your hostel in the afternoon.<br> Other times, Rejoicing on Completion of Assignments!!
+          </div>
+          <br>
+          
+
+         <div id="typing" style="font-size:100px;" ></div>
+      </div>
+
+    <div class="flex-container" style="margin-top: 20px; height: 700px; ">
+        <div class="flex-item">
+          <a style="text-decoration: none; color: white" href="jc.html" target="_self">
+            <p class="text-container1" style="font-size: 50px;">JUICE<br>CANTEEN</p>
+          </a>
+        </div>
+        <div class="flex-item">
+          <a style="text-decoration: none; color: white" href="vc.html" target="_self">
+            <p class="text-container1" style="font-size: 50px;">VINDHYA<br>CANTEEN</p>
+          </a>
+        </div>
+        <div class="flex-item">
+          <a style="text-decoration: none; color: white" href="bbc.html" target="_self">
+            <p class="text-container1" style="font-size: 50px;">BASKETBALL<br>CANTEEN</p>
+          </a>
+        </div>
+        <div class="flex-item">
+          <a style="text-decoration: none; color: white" href="tantra.html" target="_self">
+            <p class="text-container1" style="font-size: 50px;">TANTRA</p>
+          </a>
+        </div>
+    
+      </div>
+
+      <script>
+        const typingText = "Good Food Is Always There!";
+        const typingDelay = 40; // in milliseconds
+        let index = 0;
+        const typingEl = document.getElementById("typing");
+        
+        function type() {
+            typingEl.textContent += typingText[index];
+        
+            if (++index < typingText.length) {
+                setTimeout(type, typingDelay);
+            }
+        }
+        
+        setTimeout(type, typingDelay);
+      </script>
+  </body>
+</html>

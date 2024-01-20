@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/slideshow.css" />
+    <link rel="stylesheet" href="../static/nav.css" />
+    <link rel="stylesheet" href="../static/cover.css" />
+    <link rel="stylesheet" href="../static/listbox.css" />
+    <title>IIIT Eats | Savouries</title>
+
+    <style>
+        .dropdown{
+            padding:0px;
+            border-color:#f4d504;
+            border:0px;
+
+        }
+        .dropdown-arrow{
+            font-size: 100px;
+            margin-left: 20px;
+            background-color: transparent;
+            border-color: white;
+            color: white;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 100%;
+            z-index: 1;
+          }
+          
+          .dropdown.active{
+            background-color: #f4d504;
+            margin-bottom: 10px;
+
+          }
+          .dropdown.active .dropdown-content {
+            display: block;
+            background-color: white; /* Change the background color to white */
+        }
+
+
+        .dropdown2{
+            padding:0px;
+            border-color:#f4d504;
+            border:0px;
+
+        }
+        .dropdown-arrow2{
+            font-size: 100px;
+            margin-left: 20px;
+            background-color: transparent;
+            border-color: white;
+            color: white;
+            cursor: pointer;
+        }
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            min-width: 100%;
+            z-index: 1;
+          }
+          
+          .dropdown2.active{
+            background-color: #f4d504;
+            margin-bottom: 10px;
+
+          }
+          .dropdown2.active .dropdown-content2 {
+            display: block;
+            background-color: white; /* Change the background color to white */
+        }
+
+        .dropdown3{
+            padding:0px;
+            border-color:#f4d504;
+            border:0px;
+
+        }
+        .dropdown-arrow3{
+            font-size: 100px;
+            margin-left: 20px;
+            background-color: transparent;
+            border-color: white;
+            cursor: pointer;
+            color: white;
+        }
+        .dropdown-content3 {
+            display: none;
+            position: absolute;
+            min-width: 100%;
+            z-index: 1;
+          }
+          
+          .dropdown3.active{
+            background-color: #f4d504;
+            margin-bottom: 10px;
+
+          }
+          .dropdown3.active .dropdown-content3 {
+            display: block;
+            background-color: white; /* Change the background color to white */
+        }
+        </style>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <nav>
+      <a id="clicktohome" href="homepage.html"
+        ><img
+          src="../static/logo.png"
+          alt="Site logo"
+          style="height: 100px; margin-left: 50px"
+      /></a>
+      <ul
+        style="
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          text-align: center;
+          margin-top: 20px;
+          font-family: Courier Prime, Arial;
+        "
+      >
+        <li><a href="canteens.html">Canteens</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html"><img src="../static/cart.png" style="width: 13%;"> Cart</a></li>
+      </ul>
+    </nav>
+    <div class="cover-container">
+        <div class="cover-pic">
+            <img src="https://assets.bonappetit.com/photos/5b0ec9fd8afc88234c869a17/1:1/w_2560%2Cc_limit/strip-steak-with-blistered-beans-and-tomatoes.jpg" style="width: 100%;">
+            <div class="text">SAVOURIES</div>
+        </div>
+    </div>
+
+    <p>&nbsp</p>
+
+    <h1 class="text_for_cat_and_canteens">MENU</h1>
+
+    <p>&nbsp</p>
+    <hr>
+    <div class="dropdown" style="background-image: url(../static/bbc.jpeg); background-size: 1800px; background-position-y: center;">
+        <h3 style="display: inline-block; font-size: 100px; margin-left: 60px; color: white;">BBC</h3>
+        <button class="dropdown-arrow" onclick="toggleDropdown()">&#9662;</button>
+        <div class="dropdown-content">
+
+          <p>&nbsp;</p>
+            <div class="ncbox">
+                <div class="item">Plain Maggie</div>
+                <div class="canteen">BBC</div>
+                <div class="category">Savouries</div>
+                <div class="price">Rs. 30</div>
+                <div class="add-button">
+                    <button id="addtoplaylist" data-item="Plain Maggie">+</button>	
+                </div>
+              </div>
+            
+              <p>&nbsp</p>
+            
+            <div class="ncbox">
+              <div class="item">Cheese Maggie</div>
+              <div class="canteen">BBC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 40</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Cheese Maggie">+</button>	
+              </div>
+            </div>
+            
+            <p>&nbsp</p>
+            
+            <div class="ncbox">
+              <div class="item">Hot Garlic</div>
+              <div class="canteen">BBC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 35</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Hot Garlic">+</button>	
+              </div>
+            </div>
+            
+            <p>&nbsp</p>
+            
+            <div class="ncbox">
+              <div class="item">Egg Maggie</div>
+              <div class="canteen">BBC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 50</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Egg Maggie">+</button>	
+              </div>
+            </div>
+            
+            <p>&nbsp</p>
+            
+            <div class="ncbox">
+              <div class="item">Plain Dosa</div>
+              <div class="canteen">BBC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 35</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Plain Dosa">+</button>	
+              </div>
+            </div>
+            
+            <p>&nbsp</p>
+            
+            <div class="ncbox">
+              <div class="item">Onion Dosa</div>
+              <div class="canteen">BBC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 45</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Onion Dosa">+</button>	
+              </div>
+            </div>
+            
+            <p>&nbsp</p>
+            
+            <div class="ncbox">
+              <div class="item">Paneer Dosa</div>
+              <div class="canteen">BBC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 45</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Paneer Dosa">+</button>	
+              </div>
+            </div>
+            
+            <p>&nbsp</p>
+            
+            <div class="ncbox">
+              <div class="item">Egg Dosa</div>
+              <div class="canteen">BBC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 50</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Egg Dosa">+</button>	
+              </div>
+            </div>
+            
+            <p>&nbsp</p>
+            
+            <div class="ncbox">
+              <div class="item">Omelet</div>
+              <div class="canteen">BBC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 40</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Omelet">+</button>	
+              </div>
+            </div>
+            
+            <p>&nbsp</p>	
+        </div>
+    </div>
+</div>
+</div>
+
+<hr>
+
+<div class="dropdown2" style="background-image: url(../static/vc.jpeg); background-size: 1800px; background-position-y: center;">
+    <h3 style="display: inline-block; font-size: 100px; margin-left: 60px; color: white;">VC</h3>
+    <button class="dropdown-arrow2" onclick="toggleDropdown2()">&#9662;</button>
+    <div class="dropdown-content2">
+
+      <p>&nbsp;</p>
+        <div class="ncbox">
+            <div class="item">Masala Bun</div>
+            <div class="canteen">VC</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 30</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Masala Bun">+</button>	
+            </div>
+          </div>
+          
+          <p>&nbsp</p>
+          
+          <div class="ncbox">
+            <div class="item">Mini Pizza</div>
+            <div class="canteen">VC</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 50</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Mini Pizza">+</button>	
+            </div>
+          </div>
+          
+          <p>&nbsp</p>
+          
+          <div class="ncbox">
+            <div class="item">Paneer Roll</div>
+            <div class="canteen">VC</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 30</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Paneer Roll">+</button>	
+            </div>
+          </div>
+          
+          <p>&nbsp</p>
+          
+          <div class="ncbox">
+            <div class="item">Aloo Samosa</div>
+            <div class="canteen">VC</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 15</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Aloo Samosa">+</button>	
+            </div>
+          </div>
+          
+          <p>&nbsp</p>
+          
+          <div class="ncbox">
+            <div class="item">Hot Dog</div>
+            <div class="canteen">VC</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 60</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Hot Dog">+</button>	
+            </div>
+          </div>
+          
+          <p>&nbsp</p>
+          
+          <div class="ncbox">
+            <div class="item">Veg Sandwich</div>
+            <div class="canteen">VC</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 40</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Veg Sandwich">+</button>	
+            </div>
+          </div>
+          
+          <p>&nbsp</p>
+          
+          <div class="ncbox">
+            <div class="item">Spinach Corn Sandwich</div>
+            <div class="canteen">VC</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 60</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Spinach Corn Sandwich">+</button>	
+            </div>
+          </div>
+          
+          <p>&nbsp</p>
+          
+          <div class="ncbox">
+            <div class="item">Set Dosa</div>
+            <div class="canteen">VC</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 40</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Set Dosa">+</button>	
+            </div>
+          </div>
+
+          <p>&nbsp;</p>
+          
+          <div class="ncbox">
+              <div class="item">Ponganalu</div>
+              <div class="canteen">VC</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 50</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Ponganalu">+</button>	
+              </div>
+            </div>
+          
+          <p>&nbsp;</p>
+
+
+    </div>
+</div>
+<hr>
+<div class="dropdown3" style="background-image: url(../static/tantra.jpeg); background-size: 1800px; background-position-y: center;">
+    <h3 style="display: inline-block; font-size: 100px; margin-left: 60px; color: white;">Tantra</h3>
+    <button class="dropdown-arrow3" onclick="toggleDropdown3()">&#9662;</button>
+    <div class="dropdown-content3">
+
+      <p>&nbsp;</p>
+        <div class="ncbox">
+            <div class="item">Paneer Shawarma</div>
+            <div class="canteen">Tantra</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 80</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Paneer Shawarma">+</button>	
+            </div>
+          </div>
+      
+          <p>&nbsp</p>
+      
+          <div class="ncbox">
+            <div class="item">Ckicken Shawarma</div>
+            <div class="canteen">Tantra</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 90</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Ckicken Shawarma">+</button>	
+            </div>
+          </div>
+      
+          <p>&nbsp</p>
+      
+        <div class="ncbox">
+          <div class="item">Veg. Manchuria</div>
+          <div class="canteen">Tantra</div>
+          <div class="category">Savouries</div>
+          <div class="price">Rs. 70</div>
+          <div class="add-button">
+              <button id="addtoplaylist" data-item="Veg. Manchuria">+</button>	
+          </div>
+        </div>
+      
+        <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Chilly Paneer</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 120</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Chilly Paneer">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">French Fries</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 60</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="French Fries">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Chicken Lollipop</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 130</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Chicken Lollipop">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Chicken 65</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 130</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Chicken 65">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Veg Fried Rice</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 75</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Veg Fried Rice">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Veg Garlic Noodles</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 80</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Veg Garlic Noodles">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Egg Fried Rice</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 80</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Egg Fried Rice">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Egg Noodles</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 80</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Egg Noodles">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Chicken Fried Rice</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 90</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Chicken Fried Rice">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Chicken Noodles</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 90</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Chicken Noodles">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+      <div class="ncbox">
+        <div class="item">Bread Omelet</div>
+        <div class="canteen">Tantra</div>
+        <div class="category">Savouries</div>
+        <div class="price">Rs. 50</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Bread Omelet">+</button>	
+        </div>
+      </div>
+      
+      <p>&nbsp</p>
+      
+          <div class="ncbox">
+            <div class="item">Veg Maggie</div>
+            <div class="canteen">Tantra</div>
+            <div class="category">Savouries</div>
+            <div class="price">Rs. 40</div>
+            <div class="add-button">
+                <button id="addtoplaylist" data-item="Veg Maggie">+</button>	
+            </div>
+          </div>
+      
+          <p>&nbsp</p>
+      
+          <div class="ncbox">
+              <div class="item">Chicken Maggie</div>
+              <div class="canteen">Tantra</div>
+              <div class="category">Savouries</div>
+              <div class="price">Rs. 60</div>
+              <div class="add-button">
+                  <button id="addtoplaylist" data-item="Chicken Maggie">+</button>	
+              </div>
+          </div>
+      
+          <p>&nbsp</p>
+
+    </div>
+
+    <hr>
+</div>
+
+<script src="../static/add.js">
+</script>
+<script>
+    function toggleDropdown() {
+      var dropdown = document.querySelector('.dropdown');
+      dropdown.classList.toggle('active');
+    }
+
+    function toggleDropdown2() {
+        var dropdown = document.querySelector('.dropdown2');
+        dropdown.classList.toggle('active');
+      }
+
+      function toggleDropdown3() {
+        var dropdown = document.querySelector('.dropdown3');
+        dropdown.classList.toggle('active');
+      } 
+    </script>
+  </body>
+</html>

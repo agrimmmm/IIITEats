@@ -1,0 +1,87 @@
+.flex-container2 {
+    display: flex;
+    flex-wrap: stretch;
+ 
+    height: 800px;
+ 
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+    /* height: 800px; */
+    background-color: #f1f1f1;
+  }
+ 
+  .flex-item2 {
+    color: #f1f1f1;
+    font-size: 400px;
+    width: 200px;
+    flex-grow: 1;
+    /* padding: 20px; */
+    /* margin: 10px; */
+    /* border-radius: 20px; */
+    word-break: break-word;
+    text-align: center;
+    height: 800px;
+ 
+    font-size: 30px;
+    transition: flex-grow 0.5s;
+  }
+ 
+  .flex-item2:hover {
+    flex-grow: 2.5;
+    filter: brightness(80%);
+    transition: 0.5s;
+ 
+  }
+ 
+  .flex-item2:hover:after {
+    filter: brightness(100%);
+ 
+  }
+ 
+  .flex-item2:nth-child(1) {
+ 
+    background-image: url("https://uploads-ssl.webflow.com/5f97839dbb364182a84ef584/612900407bd12963b422a20d_Q321_Evergi_Trending-Ingredients-Functional-Bev_Feature-Image.jpg");
+    background-size: cover;
+    background-position: center;
+ 
+  }
+ 
+ 
+ 
+  .flex-item2:nth-child(2) {
+    background-image: url("https://paleoleap.com/wp-content/uploads/2019/07/grilled-tbone-grilled-vegetable-featured.jpg");
+    background-size: cover;
+    background-position: center;
+ 
+  }
+ 
+  .flex-item2:nth-child(3) {
+    background-image: url("https://www.crazyforcrust.com/wp-content/uploads/2022/06/4th-of-July-Charcuterie-Board-36-1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+ 
+
+ 
+ 
+  .flex-item2:hover .text-container1 {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+ 
+  .text-container1 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+ 
+  .text-container1 p {
+ 
+    color: white;
+  }
+ 

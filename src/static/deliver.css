@@ -1,0 +1,94 @@
+.ncbox{
+	height: 230px;
+	width: 85%;
+	margin: 0 auto;
+	display: flexbox;
+	align-items: center;
+	font-size: 35px;
+	transition: padding 0.2s, font-size 0.2s, color 0.2s;
+	border-radius: 25px;
+	padding:0 20px 0 0;
+	font-family: Arial, Helvetica, sans-serif;
+	position:relative;
+	background-color: #f4d50450;
+}
+
+.ncbox:hover{
+	box-shadow: 6px 2px 3px #f4d50430;
+}
+
+.firstcol {
+    font-size: 30px;
+	position:absolute;
+	left:40px;
+}
+
+.item {
+	font-weight: bold;
+	position: relative;
+	top: 40px;
+	font-size: 1.25em;
+}
+
+.name {
+	position: relative;
+	top: 100px;
+}
+
+.contact {
+	position: relative;
+	top: 100px;
+}
+
+.secondcol {
+    font-size: 30px;
+	position: absolute;
+	left: 510px;
+}
+
+.canteen {
+	position: relative;
+	top: 143px;
+}
+
+.address {
+	position: relative;
+	top: 143px;
+}
+
+.price {
+    font-size: 30px;
+	text-align: end;
+	float:right;
+	position:absolute;
+	font-weight: bold;
+	right:300px;
+	top: 45%;
+}
+
+.quantity {
+	font-size: 30px;
+	position: absolute;
+	right: 650px;
+	top: 45%;
+}
+
+.assign{
+	position: absolute;
+	left: 1350px;
+	font-size: 25px;
+	top: 37%;
+	border-radius: 40px;
+	padding: 20px 40px;
+	background-color: rgb(11, 185, 11);
+	color: white;
+	cursor: pointer;
+	border-color: rgb(11, 185, 11);
+}
+
+.assign:hover {
+	background: rgb(11, 190, 11);
+	  color:#eee;
+	-webkit-transition:all .2s ease;
+			transition:all .2s ease;
+  }

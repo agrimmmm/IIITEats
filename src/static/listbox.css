@@ -1,0 +1,99 @@
+.ncbox{
+	height: 130px;
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	font-size: 35px;
+	transition: padding 0.2s, font-size 0.2s, color 0.2s;
+	border-radius: 25px;
+	padding:0 20px 0 0;
+	font-family: Arial, Helvetica, sans-serif;
+	position:relative;
+	background-color: #f4d50450;
+}
+
+.ncbox:hover{
+	box-shadow: 6px 2px 3px #f4d50430;
+}
+
+.price{
+	font-size: 25px;
+	text-align: end;
+	float:right;
+	position:absolute;
+	font-weight: bold;
+	right:250px;
+}
+
+.canteen{
+	font-size: 25px;
+	position: absolute;
+	left: 450px;
+}
+
+.category{
+	font-size: 25px;
+	position: absolute;
+	right: 650px;	
+}
+
+.add-button{
+	position: absolute;
+	left: 1420px;
+	font-size: 25px;
+}
+
+.item{
+	font-size: 30px;
+	position:absolute;
+	font-weight: bold;
+	left:40px;
+}
+
+#addtoplaylist{
+	border-radius: 50%;
+	border-color: #f4d504;
+	background-color: #f4d504;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	padding-left: 11px;
+	padding-right: 11px;
+}
+
+#add{
+	border-radius: 50%;
+	border-color: #f4d504;
+	background-color: #f4d504;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	padding-left: 11px;
+	padding-right: 11px;
+}
+
+#add:hover{
+	opacity: 50%;
+}
+
+
+#addtoplaylist:hover{
+	opacity: 70%;
+}
+
+#subtract {
+	border-radius: 50%;
+	border-color: #f4d504;
+	background-color: #f4d504;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
+
+#subtract:hover{
+	opacity: 50%;
+}

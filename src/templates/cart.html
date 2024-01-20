@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="../static/nav.css" />
+        <link rel="stylesheet" href="../static/canteens.css" />
+        <link rel="stylesheet" href="../static/categories.css" />
+        <link rel="stylesheet" href="../static/form.css" />
+        <link rel="stylesheet" href="../static/cover.css" />
+        <link rel="stylesheet" href="../static/slideshow.css" />
+        
+        <title>IIIT Eats | Cart</title>
+
+      </head>
+<body style="background-color: #f4d504;">
+    <nav style="font-family: Arial, Helvetica, sans-serif">
+      <a id="clicktohome" href="homepage.html"
+      ><img
+      src="../static/logo.png"
+      alt="Site logo"
+      style="height: 100px; margin-left: 50px"
+      /></a>
+      <ul
+      style="
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          text-align: center;
+          margin-top: 20px;
+          font-family: Courier Prime, Arial;
+        "
+      >
+      <li><a href="canteens.html">Canteens</a></li>
+      <li><a href="deliver.html">Deliver</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="cart.html"><img src="../static/cart.png" style="width: 13%;"> Cart</a></li>
+    </ul>
+  </nav>
+  
+  <div class="cover-container" style="margin-top: 100px;">
+    <div class="cover-pic">
+        <img src="https://pbs.twimg.com/media/Fms37saWYBYyPko.jpg:large" style="width: 100%;">
+        <div class="text">CHECKOUT</div>
+    </div>
+</div> 
+
+  <div class="credit-info">
+    <div class="credit-info-content">
+      <img src="../static/logo.png" height="80" class="credit-card-image" id="credit-card-image"><br>
+
+      <div class="total" style="margin-bottom: 35px; text-align: right;">Total: Rs. {{ final_value }}</div>
+
+      <span class="label">Name</span>
+      <input class="input-field" type="text" id="name" required>
+      <span class="label">Contact No.</span>
+      <input class="input-field" type="text" id="contact"required >
+      <table class="half-input-table">
+        <tr>
+          <td><span class="label">Hostel</span>
+            <input class="input-field" type="text" id="hostel"required>
+          </td>
+          <td><span class="label">Room No.</span>
+            <input class="input-field" type="text" id="room"required>
+          </td>
+        </tr>
+      </table>
+      <button class="pay-btn"><span class="label">Checkout</span></button>
+      </div>
+  </div>
+
+  <div class="left-half" style="margin-top: 0px; padding-bottom: 272px;">  
+    <div class="text_for_cat_and_canteens">
+      <img src="../static/cart.png" style="width: 6.5%; margin-top: 70px;"> CART
+    </div>
+    <p>&nbsp;</p>
+
+    {% if items %}
+      {% for item in items %}
+        <div class="ncbox">
+          <div class="item">{{ item.item }}</div>
+            <div class="canteen">{{ item.canteen }}</div>
+            <div class="category">{{ item.category }}</div>
+            <div class="add-button">Rs. {{ item.total_value }}</div>
+            <div class="price">
+                <button id="subtract" onclick="decrementQuantity('{{ item.item }}', {{ item.unit }})">-</button>
+                {{ item.unit }}
+                <button id="add" onclick="incrementQuantity('{{ item.item }}', {{ item.unit }})">+</button>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        {% endfor %}
+      {% else %}
+        <p style="font-size: 100px; text-align: center; color: gray;">No Items in the Cart</p>
+      {% endif %}
+    </div>
+
+    
+
+      <script>
+      function decrementQuantity(item, unit) {
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', '/update_unit');
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText);
+                  if (response.status === 'success') {
+                    // Reload the page to update the cart
+                    location.reload();
+                  }
+              }
+            };
+            xhr.send(JSON.stringify({
+              'item': item,
+              'unit': unit
+          }));
+      }
+      
+      function incrementQuantity(item, unit) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/update_unit2');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            if (response.status === 'success') {
+              // Reload the page to update the cart
+              location.reload();
+            }
+          }
+        };
+        xhr.send(JSON.stringify({
+          'item': item,
+          'unit': unit 
+        }));
+      } 
+    </script>
+    
+    
+  </div>
+  <script src="../static/cart.js"></script>
+  <script src="../static/add.js"></script>
+</body>
+</html>

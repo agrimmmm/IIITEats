@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/slideshow.css" />
+    <link rel="stylesheet" href="../static/nav.css" />
+    <link rel="stylesheet" href="../static/cover.css" />
+    <link rel="stylesheet" href="../static/listbox.css" />
+    <title>IIIT Eats | Beverages</title>
+
+    <style>
+        .dropdown{
+            padding:0px;
+            border-color:#f4d504;
+            border:0px;
+
+        }
+        .dropdown-arrow{
+            font-size: 100px;
+            margin-left: 20px;
+            background-color: transparent;
+            border-color: white;
+            color: white;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 100%;
+            z-index: 1;
+          }
+          
+          .dropdown.active{
+            background-color: #f4d504;
+            margin-bottom: 10px;
+
+          }
+          .dropdown.active .dropdown-content {
+            display: block;
+            background-color: white; /* Change the background color to white */
+        }
+
+
+        .dropdown2{
+            padding:0px;
+            border-color:#f4d504;
+            border:0px;
+
+        }
+        .dropdown-arrow2{
+            font-size: 100px;
+            margin-left: 20px;
+            background-color: transparent;
+            border-color: white;
+            color: white;
+            cursor: pointer;
+        }
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            min-width: 100%;
+            z-index: 1;
+          }
+          
+          .dropdown2.active{
+            background-color: #f4d504;
+            margin-bottom: 10px;
+
+          }
+          .dropdown2.active .dropdown-content2 {
+            display: block;
+            background-color: white; /* Change the background color to white */
+        }
+
+        .dropdown3{
+            padding:0px;
+            border-color:#f4d504;
+            border:0px;
+
+        }
+        .dropdown-arrow3{
+            font-size: 100px;
+            margin-left: 20px;
+            background-color: transparent;
+            border-color: white;
+            color: white;
+            cursor: pointer;
+        }
+        .dropdown-content3 {
+            display: none;
+            position: absolute;
+            min-width: 100%;
+            z-index: 1;
+          }
+          
+          .dropdown3.active{
+            background-color: #f4d504;
+            margin-bottom: 10px;
+
+          }
+          .dropdown3.active .dropdown-content3 {
+            display: block;
+            background-color: white; /* Change the background color to white */
+        }
+        </style>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <nav>
+      <a id="clicktohome" href="homepage.html"
+        ><img
+          src="../static/logo.png"
+          alt="Site logo"
+          style="height: 100px; margin-left: 50px"
+      /></a>
+      <ul
+        style="
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          text-align: center;
+          margin-top: 20px;
+          font-family: Courier Prime, Arial;
+        "
+      >
+        <li><a href="canteens.html">Canteens</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html"><img src="../static/cart.png" style="width: 13%;"> Cart</a></li>
+      </ul>
+    </nav>
+    <div class="cover-container">
+        <div class="cover-pic">
+            <img src="https://www.nutritionfact.in/wp-content/uploads/2020/02/juices.jpg" style="width: 100%;">
+            <div class="text">BEVERAGES</div>
+        </div>
+    </div>
+
+    <p>&nbsp</p>
+
+    <h1 class="text_for_cat_and_canteens">MENU</h1>
+
+    <p>&nbsp</p>
+    <hr>
+    <div class="dropdown" style="background-image: url(../static/jc.jpeg); background-size: 1800px; background-position-y: center;">
+        <h3 style="display: inline-block; font-size: 100px; margin-left: 60px; color: white;">JC</h3>
+        <button class="dropdown-arrow" onclick="toggleDropdown()">&#9662;</button>
+        <div class="dropdown-content">
+
+          <p>&nbsp;</p>
+
+    <div class="ncbox">
+      <div class="item">Chickoo Shake</div>
+      <div class="canteen">JC</div>
+      <div class="category">Beverages</div>
+      <div class="price">Rs. 32</div>
+      <div class="add-button">
+          <button id="addtoplaylist"  data-item="Chickoo Shake">+</button>	
+      </div>
+    </div>
+
+    <p>&nbsp</p>
+
+    <div class="ncbox">
+      <div class="item">Mango Shake</div>
+      <div class="canteen">JC</div>
+      <div class="category">Beverages</div>
+      <div class="price">Rs. 38</div>
+      <div class="add-button">
+          <button id="addtoplaylist" data-item="Mango Shake">+</button>	
+      </div>
+    </div>
+
+    <p>&nbsp</p>
+
+  <div class="ncbox">
+    <div class="item">Watermelon Juice</div>
+    <div class="canteen">JC</div>
+    <div class="category">Beverages</div>
+    <div class="price">Rs. 30</div>
+    <div class="add-button">
+        <button id="addtoplaylist" data-item="Watermelon Juice">+</button>	
+    </div>
+  </div>
+
+  <p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Cold Coffee</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 32</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Cold Coffee">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Lemon Soda</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 20</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Lemon Soda">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Strawberry Shake</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 47</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Strawberry Shake">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Banana Shake</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 28</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Banana Shake">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Mix Fruit Shake</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 38</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Mix Fruit Shake">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Badam Milk</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 38</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Badam milk">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Nimboo Pani</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 15</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Nimboo Paani">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Rose Milk</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 27</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Rose Milk">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Bornvita</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 32</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Bornvita ">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Guava Shake</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 33</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Guava Shake">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+<div class="ncbox">
+  <div class="item">Avocado with Honey</div>
+  <div class="canteen">JC</div>
+  <div class="category">Beverages</div>
+  <div class="price">Rs. 65</div>
+  <div class="add-button">
+      <button id="addtoplaylist" data-item="Avocado with Honey">+</button>	
+  </div>
+</div>
+
+<p>&nbsp</p>
+
+    <div class="ncbox">
+      <div class="item">Oreo Shake</div>
+      <div class="canteen">JC</div>
+      <div class="category">Beverages</div>
+      <div class="price">Rs. 37</div>
+      <div class="add-button">
+          <button id="addtoplaylist" data-item="Oreo Shake">+</button>	
+      </div>
+    </div>
+
+    <p>&nbsp</p>
+
+    <div class="ncbox">
+        <div class="item">Mosambi Juice</div>
+        <div class="canteen">JC</div>
+        <div class="category">Beverages</div>
+        <div class="price">Rs. 38</div>
+        <div class="add-button">
+            <button id="addtoplaylist" data-item="Mosambi Juice">+</button>	
+        </div>
+    </div><p>&nbsp</p>
+
+	
+        </div>
+    </div>
+</div>
+</div>
+
+<hr>
+
+<div class="dropdown2" style="background-image: url(../static/vc.jpeg); background-size: 1800px; background-position-y: center;">
+    <h3 style="display: inline-block; font-size: 100px; margin-left: 60px; color: white;">VC</h3>
+    <button class="dropdown-arrow2" onclick="toggleDropdown2()">&#9662;</button>
+    <div class="dropdown-content2">
+
+      <p>&nbsp;</p>
+        <div class="ncbox">
+            <div class="item">Sting</div>
+            <div class="canteen">VC</div>
+            <div class="category">Beverages</div>
+            <div class="price">Rs. 35</div>
+            <div class="add-button">
+                <button id="addtoplaylist"  data-item="Sting">+</button>	
+            </div>
+        </div>
+
+        <p>&nbsp</p>
+
+        <div class="ncbox">
+            <div class="item">Nescafe Coffee</div>
+            <div class="canteen">VC</div>
+            <div class="category">Beverages</div>
+            <div class="price">Rs. 45</div>
+            <div class="add-button">
+                <button id="addtoplaylist"  data-item="Nescafe Coffee">+</button>	
+            </div>
+        </div><p>&nbsp</p>
+    
+    <div class="ncbox">
+      <div class="item">Ice Tea</div>
+      <div class="canteen">VC</div>
+      <div class="category">Beverages</div>
+      <div class="price">Rs. 30</div>
+      <div class="add-button">
+          <button id="addtoplaylist" data-item="Ice Tea">+</button>	
+      </div>
+    </div>
+    
+    <p>&nbsp</p>
+
+
+    </div>
+</div>
+<hr>
+<div class="dropdown3" style="background-image: url(../static/bbc.jpeg); background-size: 1800px; background-position-y: center;">
+    <h3 style="display: inline-block; font-size: 100px; margin-left: 60px; color: white;">BBC</h3>
+    <button class="dropdown-arrow3" onclick="toggleDropdown3()">&#9662;</button>
+    <div class="dropdown-content3">
+
+      <p>&nbsp;</p>
+        <div class="ncbox">
+            <div class="item"> Coffee</div>
+            <div class="canteen">BBC</div>
+            <div class="category">Beverages</div>
+            <div class="price">Rs. 20</div>
+            <div class="add-button">
+                <button id="addtoplaylist"  data-item="Coffee ">+</button>	
+            </div>
+        </div>
+        <p>&nbsp</p>
+        <div class="ncbox">
+            <div class="item"> Tea</div>
+            <div class="canteen">BBC</div>
+            <div class="category">Beverages</div>
+            <div class="price">Rs. 20</div>
+            <div class="add-button">
+                <button id="addtoplaylist"  data-item="Tea">+</button>	
+            </div>
+        </div>
+        <p>&nbsp</p>
+
+    </div>
+
+    <hr>
+</div>
+<script src="../static/add.js">
+</script>
+<script>
+    function toggleDropdown() {
+      var dropdown = document.querySelector('.dropdown');
+      dropdown.classList.toggle('active');
+    }
+
+    function toggleDropdown2() {
+        var dropdown = document.querySelector('.dropdown2');
+        dropdown.classList.toggle('active');
+      }
+
+      function toggleDropdown3() {
+        var dropdown = document.querySelector('.dropdown3');
+        dropdown.classList.toggle('active');
+      } 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/nav.css" />
+        <link rel="stylesheet" href="../static/slideshow.css" />
+        <link rel="stylesheet" href="../static/canteens.css" />
+        <link rel="stylesheet" href="../static/categories.css" />
+
+        <title>IIIT Eats</title>
+
+      </head>
+<body>
+    <nav style="font-family: Arial, Helvetica, sans-serif">
+      <a id="clicktohome" href="homepage.html"
+        ><img
+          src="../static/logo.png"
+          alt="Site logo"
+          style="height: 100px; margin-left: 50px"
+      /></a>
+      <ul
+        style="
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          text-align: center;
+          margin-top: 20px;
+          font-family: Courier Prime, Arial;
+        "
+      >
+        <li><a href="canteens.html">Canteens</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html"><img src="../static/cart.png" style="width: 13%;"> Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="slideshow-container" >
+
+        <div class="mySlides fade"><a href="canteens.html">
+          <img src="https://www.cafetariatcentrum.nl/wp-content/uploads/2020/10/ALB101020-37_-scaled.jpg" style="width:100%">
+          <div class="text">CANTEENS</div></a>
+        </div>
+        
+        <div class="mySlides fade"><a href="deliver.html">
+          <img src="https://assets.gqindia.com/photos/6070617423780a7fa9a3ec07/16:9/pass/Online%20grocery%20services.jpeg" style="width:100%">
+          <div class="text">DELIVERY</div></a>
+        </div>
+        
+        <div class="mySlides fade"><a href="categories.html">
+          <img src="https://www.cypressgreen.in/blog/wp-content/uploads/2021/03/food.jpg" style="width:100%">
+          <div class="text">CATEGORIES</div></a>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+
+        <div class="text_for_cat_and_canteens" >
+            CANTEENS
+        </div>
+
+        <div class="text_for_cat_and_canteens" style="height: 430px; color: white; background-color:#f4d504; font-size: 55px; background-image: url(../static/back.jpeg);"  >
+          
+          <div style="text-align:left; margin-left:20px; padding-top: 20px;">Don't feel like to eat Mess Food? 
+            <br>Legs Too Tired??<br> Don't Worry!!
+          </div>
+          <br>
+          
+
+         <div id="typing" ></div>
+      </div>
+
+        <div class="flex-container" style="margin-top: 20px; height: 700px; ">
+            <div class="flex-item">
+              <a style="text-decoration: none; color: white" href="jc.html" target="_self">
+                <p class="text-container1" style="font-size: 50px;">JUICE<br>CANTEEN</p>
+              </a>
+            </div>
+            <div class="flex-item">
+              <a style="text-decoration: none; color: white" href="vc.html" target="_self">
+                <p class="text-container1" style="font-size: 50px;">VINDHYA<br>CANTEEN</p>
+              </a>
+            </div>
+            <div class="flex-item">
+              <a style="text-decoration: none; color: white" href="bbc.html" target="_self">
+                <p class="text-container1" style="font-size: 50px;">BASKETBALL<br>CANTEEN</p>
+              </a>
+            </div>
+            <div class="flex-item">
+              <a style="text-decoration: none; color: white" href="tantra.html" target="_self">
+                <p class="text-container1" style="font-size: 50px;">TANTRA</p>
+              </a>
+            </div>
+        
+          </div>
+
+
+          <div class="text_for_cat_and_canteens" style="margin-top: 8%; ">
+            CATEGORIES
+        </div>
+
+        <div class="text_for_cat_and_canteens" style="height: 430px; background-color:#f4d504; font-size: 55px; color:beige; background-image: url(https://dqt8gd4elnkw6.cloudfront.net/image/Best-Fruits-for-Healthy-Glowing-Skin-This-Summer.jpg);"  >
+          
+          <div style="text-align:left; margin-left:20px; padding-top: 20px;">Craving For Something Different??
+            <br>Or Something Very Specific...<br>Be it A Sweet Tooth or A Spice farer!!
+          </div>
+          <br>
+          
+
+         <div id="typing2" ></div>
+      </div>
+
+        <div class="flex-container2" style="margin-top: 20px; height: 700px; ">
+            <div class="flex-item2">
+              <a style="text-decoration: none; color: white" href="beverages.html" target="_self">
+                <p class="text-container1" style="font-size: 70px;">BEVERAGES</p>
+              </a>
+            </div>
+            <div class="flex-item2">
+              <a style="text-decoration: none; color: white" href="savouries.html" target="_self">
+                <p class="text-container1" style="font-size: 70px;">SAVOURIES</p>
+              </a>
+            </div>
+            <div class="flex-item2">
+              <a style="text-decoration: none; color: white" href="desserts.html" target="_self">
+                <p class="text-container1" style="font-size: 70px;">DESSERTS</p>
+              </a>
+            </div>
+
+        
+          </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            
+            }
+            
+            // Change slides automatically every 3 seconds
+            setInterval(function() {
+              plusSlides(1);
+            }, 4000);
+            
+
+            const typingText = "We Have Got You Covered!!";
+            const typingDelay = 40; // in milliseconds
+            let index = 0;
+            const typingEl = document.getElementById("typing");
+            
+            function type() {
+                typingEl.textContent += typingText[index];
+            
+                if (++index < typingText.length) {
+                    setTimeout(type, typingDelay);
+                }
+            }
+            
+            setTimeout(type, typingDelay);
+            
+            function type2() {
+                const typingText2 = "We Have Got It All!!";
+                const typingDelay2 = 40; // in milliseconds
+                let index2 = 0;
+                const typingEl2 = document.getElementById("typing2");
+            
+                function type2Inner() {
+                    typingEl2.textContent += typingText2[index2];
+            
+                    if (++index2 < typingText2.length) {
+                        setTimeout(type2Inner, typingDelay2);
+                    }
+                }
+            
+                setTimeout(type2Inner, typingDelay);
+            }
+            
+            setTimeout(type2, typingDelay * typingText.length);
+            
+
+            </script>
+  </body>
+
+    </html>

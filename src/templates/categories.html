@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/slideshow.css">
+    <link rel="stylesheet" href="../static/nav.css" />
+    <link rel="stylesheet" href="../static/categories.css">
+    <title>IIIT Eats | Categories</title>
+  </head>
+  <body>
+    <nav style="font-family: Arial, Helvetica, sans-serif">
+      <a id="clicktohome" href="homepage.html"
+        ><img
+          src="../static/logo.png"
+          alt="Site logo"
+          style="height: 100px; margin-left: 50px"
+      /></a>
+      <ul
+        style="
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          text-align: center;
+          margin-top: 20px;
+          font-family: Courier Prime, Arial;
+        "
+      >
+        <li><a href="canteens.html">Canteens</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html"><img src="../static/cart.png" style="width: 13%;"> Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="https://www.cypressgreen.in/blog/wp-content/uploads/2021/03/food.jpg" style="width:100%">
+          <div class="text">CATEGORIES</div>
+        </div>
+        
+        <div class="mySlides fade"><a href="beverages.html">
+          <img src="https://www.nutritionfact.in/wp-content/uploads/2020/02/juices.jpg" style="width:100%">
+          <div class="text">BEVERAGES</div></a>
+        </div>
+        
+        <div class="mySlides fade"><a href="savouries.html">
+          <img src="https://assets.bonappetit.com/photos/5b0ec9fd8afc88234c869a17/1:1/w_2560%2Cc_limit/strip-steak-with-blistered-beans-and-tomatoes.jpg" style="width:100%">
+          <div class="text">SAVOURIES</div></a>
+        </div>
+
+        <div class="mySlides fade"><a href="desserts.html">
+          <img src="https://hips.hearstapps.com/hmg-prod/images/mothers-day-desserts-1647462943.jpeg" style="width:100%">
+          <div class="text">DESSERTS</div></a>
+        </div>
+
+
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+        
+        
+        
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        
+        }
+        
+        // Change slides automatically every 3 seconds
+        setInterval(function() {
+          plusSlides(1);
+        }, 3000);
+        
+        
+        </script>
+
+        <div class="flex-container2" style="margin-top: 20px; height: 700px; ">
+            <div class="flex-item2">
+              <a style="text-decoration: none; color: white" href="beverages.html" target="_self">
+                <p class="text-container1" style="font-size: 70px;">BEVERAGES</p>
+              </a>
+            </div>
+            <div class="flex-item2">
+              <a style="text-decoration: none; color: white" href="savouries.html" target="_self">
+                <p class="text-container1" style="font-size: 70px;">SAVOURIES</p>
+              </a>
+            </div>
+            <div class="flex-item2">
+              <a style="text-decoration: none; color: white" href="desserts.html" target="_self">
+                <p class="text-container1" style="font-size: 70px;">DESSERTS</p>
+              </a>
+            </div>
+
+        
+          </div>
+  </body>
+</html>

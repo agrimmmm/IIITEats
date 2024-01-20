@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/nav.css" />
+    <link rel="stylesheet" href="../static/cover.css" />
+    <link rel="stylesheet" href="../static/deliver.css" />
+    <link rel="stylesheet" href="../static/slideshow.css" />
+
+    <title>IIIT Eats | Deliver</title>
+  </head>
+  <body>
+    <nav style="font-family: Arial, Helvetica, sans-serif">
+      <a id="clicktohome" href="homepage.html"
+        ><img
+          src="../static/logo.png"
+          alt="Site logo"
+          style="height: 100px; margin-left: 50px"
+      /></a>
+      <ul
+        style="
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          text-align: center;
+          margin-top: 20px;
+          font-family: Courier Prime, Arial;
+        "
+      >
+        <li><a href="canteens.html">Canteens</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li>
+          <a href="cart.html"
+            ><img src="../static/cart.png" style="width: 13%" /> Cart</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="cover-container">
+      <div class="cover-pic">
+          <img src="https://images.deliveryhero.io/image/fd-tw/LH/y3yn-hero.jpg" style="width: 100%;">
+          <div class="text">DELIVERIES</div>
+      </div>
+  </div>
+  <p>&nbsp;</p>
+    {% if items %}
+      {% for dev in items %}
+        <div class="ncbox">
+          <div class="firstcol">
+            <div class="item">{{ dev.item }}</div>
+            <div class="name">{{ dev.name }}</div>
+            <div class="contact">{{ dev.contact }}</div>
+          </div>
+          <div class="secondcol">
+            <div class="canteen">{{ dev.canteen }}</div>
+            <div class="address">{{ dev.room }} ( {{ dev.hostel }} )</div>
+          </div>
+            <div class="price">Rs. {{ dev.total_value }}</div>
+            <div class="quantity">{{ dev.unit }}</div>
+            <button class="assign" data-item-id="{{ dev.id }}">Assign</button>
+        </div>
+        <p>&nbsp;</p>
+        {% endfor %}
+      {% else %}
+        <p style="font-size: 100px; text-align: center; color: gray;">No Deliveries Available</p>
+      {% endif %}
+
+      <script>
+        const assignButtons = document.querySelectorAll('.assign');
+
+assignButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const itemId = button.getAttribute('data-item-id');
+        deleteItem(itemId);
+        location.reload();
+    });
+});
+
+function deleteItem(itemId) {
+    fetch(`/delete_item/${itemId}`, {
+        method: 'POST'
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            // Item deleted successfully
+            alert(data.message);
+            // Refresh the page or update the item list
+            // as per your requirement
+        } else {
+            alert('Error: ' + data.message);
+        }
+    });
+}
+
+      </script>
+  </body>
+</html>
